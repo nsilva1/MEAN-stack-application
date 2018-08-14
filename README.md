@@ -1,1 +1,1 @@
-#Demo ShoppingList Aplication using MongoDB, ExpressJS, AngularJS and NodeJS
+Demo ShoppingList Aplication using MongoDB, ExpressJS, AngularJS and NodeJS
