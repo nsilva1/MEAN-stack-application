@@ -1,13 +1,12 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyparser = require('body-parser');
-const cors = require('cors');
-const MongoClient = require('mongodb').MongoClient;
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyparser = require("body-parser");
+const cors = require("cors");
+const MongoClient = require("mongodb").MongoClient;
 
 const port = process.env.PORT || 3000;
 var app = express();
-const route = require('./route/routes.js');
-
+const route = require("./route/routes.js");
 
 //MongoClient.connect('mongodb://localhost:27017/shoppinglist', (err, client) => {
 //    if(err){
@@ -30,28 +29,28 @@ const route = require('./route/routes.js');
 //});
 
 //Connect to mongodb server
-mongoose.connect('mongodb://localhost:27017/shoppinglist');
+mongoose.connect("mongodb://localhost:27017/shoppinglist");
 
 //print to screen if connected to mongodb
-mongoose.connection.on('connected', () => {
-    console.log(`Connected to MongoDB from port ${port}`)
+mongoose.connection.on("connected", () => {
+  console.log(`Connected to MongoDB from port ${port}`);
 });
 
 //display error if it occurs
-mongoose.connection.on('error', (err) => {
-    console.log(err);
+mongoose.connection.on("error", err => {
+  console.log(err);
 });
 
 app.use(cors());
 
 app.use(bodyparser.json());
 
-app.use('/api', route);
+app.use("/api", route);
 
-app.get('/', (req, res) => {
-    res.send('We are here dude');
+app.get("/", (req, res) => {
+  res.send("We are here dude");
 });
 
 app.listen(port, () => {
-    console.log('Server started at port :' +port);
+  console.log("Server started at port :" + port);
 });
