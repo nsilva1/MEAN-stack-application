@@ -23,7 +23,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "C:/Users/Obong Owo/Desktop/MeanStackProjects/shoppinglist/client/shopping-list/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
