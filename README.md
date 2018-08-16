@@ -1,4 +1,4 @@
-ShoppingList Aplication using MongoDB, ExpressJS, AngularJS and NodeJS
+ShoppingList Aplication using MongoDB, ExpressJS, AngularJS, NodeJS and Bootstrap
 
 CRUD application using the MEAN stack.
 
